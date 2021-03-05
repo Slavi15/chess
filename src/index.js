@@ -54,13 +54,8 @@ function updateStatus() {
 
     $status.html(status)
     $fen.html(chess.fen())
-    $pgn.html(chess.pgn({ max_width: 10, newline_char: '<br>', justify_content: 'space-around' }))
+    $pgn.html(chess.pgn({ max_width: 10, newline_char: '<br>' }))
 };
-
-const el = document.getElementById('button');
-el.addEventListener('click', () => {
-    chess.reset();
-});
 
 let config = {
     position: 'start',

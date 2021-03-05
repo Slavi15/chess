@@ -6,7 +6,7 @@ let $pgn = $('#pgn');
 
 function onDragStart(source, piece, position, orientation) {
     if(chess.game_over()) {
-        chess.reset();
+        return false;
     };
 
     if((chess.turn() == 'w' && piece.search(/^b/) !== -1) || (chess.turn() == 'b' && piece.search(/^w/) !== -1)) {
@@ -56,6 +56,11 @@ function updateStatus() {
     $fen.html(chess.fen())
     $pgn.html(chess.pgn({ max_width: 10, newline_char: '<br>', justify_content: 'space-around' }))
 };
+
+const el = document.getElementById('button');
+el.addEventListener('click', () => {
+    chess.reset();
+});
 
 let config = {
     position: 'start',

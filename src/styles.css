@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    color: #282828;
 }
 
 #board {
@@ -44,6 +45,22 @@ body {
     border: rgba(0, 0, 0, 0.24) solid 1px;
 }
 
+#stats3 {
+    background-color: whitesmoke;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+    border: rgba(0, 0, 0, 0.24) solid 1px;
+    display: none;
+}
+
+.inner3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
 .inner2 {
     display: flex;
     flex-direction: column;
@@ -61,13 +78,61 @@ body {
 
 .title1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .title2 {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
-    margin: 20px auto 0 auto;
+    margin: 10px auto 0 auto;
+}
+
+.title3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#titles {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    align-items: center;
+    margin: 15px 0 5px 0;
+}
+
+#explorer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: auto auto auto auto auto;
+    font-size: 14px;
+    margin: auto 0;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    height: 150px;
+}
+
+.move, .number {
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.wins {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.option {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    justify-content: center;
+    display: flex;
 }
 
 .titlefen {
@@ -92,13 +157,13 @@ button {
 
 #status {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     margin: auto 0;
 }
 
 #com {
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     margin: auto 0;
 }
 
@@ -117,12 +182,8 @@ button {
     font-weight: bold;
     margin: 20px auto;
     overflow: auto;
-    height: 260px;
+    height: 120px;
     width: 40%;
-}
-
-#text {
-    justify-content: space-around;
 }
 
 @media screen and (max-width: 1100px) {
@@ -130,7 +191,14 @@ button {
         display: flex;
         flex-direction: column;
     }
+
     #board {
         margin: 15px auto;
+        width: 40%;
+    }
+
+    .stats {
+        margin: auto;
+        max-width: 70%;
     }
 }
